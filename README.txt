@@ -58,3 +58,12 @@ git push
 
 Git pull wenn Collaborator etwas am Readme geändert hat
 git pull
+
+
+Auf Windows:
+cd ~
+cd /home/<username>
+ls
+ls .ssh
+code id_rsa
+code .ssh
