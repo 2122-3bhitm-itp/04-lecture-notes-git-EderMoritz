@@ -1,6 +1,6 @@
 = My Project
-firstname lastname
-1.0.0, yyyy-mm-dd: Some notes
+Moritz Eder
+2021/22
 ifndef::imagesdir[:imagesdir: images]
 //:toc-placement!:  // prevents the generation of the doc at this position, so it can be printed afterwards
 :sourcedir: ../src/main/java
@@ -14,8 +14,110 @@ ifdef::backend-html5[]
 // print the toc here (not at the default position)
 //toc::[]
 
-== Header 1
+== 14.12.21
 
+Neuen Ordner für das Repo erstellen +
+mkdir 3bhitm-labs-eder +
+cd 3bhitm-labs-eder/
 
-=== Header 2
+Befehle von Github ausführen:
+
+Readme wird erstellt +
+echo "# 3bhitm-labs-eder" >> README.md
+
+Repo wird initialisiert +
+git init
+
+Readme kommt von der woking copy in die staging area +
+git add README.md
+
+Readme wird von der staging area auf das lokale Repo
+commited +
+git commit -m "first commit"
+
+Main Branch wird erstellt +
+git branch -M main
+
+Repo wird hinzugefügt +
+git remote add origin https://github.com/EderMoritz/3bhitm-labs-eder.git
+
+Alles vom lokalen Repo kommt nun auf das remote Repo +
+git push origin main
+
+Im Homeverzeichnis wird im .ssh Ordner zwei Files erstellt: id_rsa, id_rsa.pub +
+cd +
+ssh-keygen -t rsa +
+cd .ssh +
+gedit id_rsa.pub (public key kopieren)
+
+Auf dem Github Repo rechts oben klicken -> Settings -> SSH and GPG keys -> new SSH key -> title: moritz, key: (public key einfügen) -> add SSH key
+
+Einen playground Ordner erstellen für eine bessere Übersicht und für kein Durcheinander bei den Repos +
+cd +
+cd ITP +
+mkdir playground +
+cd playground/
+
+Zurück auf Github Repo unter grüne Code Box SSH key kopieren und klonen -> yes eingeben (enter funktioniert nicht!) +
+git clone git@github.com:EderMoritz/3bhitm-labs-eder.git
+
+Zu Settings auf dem Repo -> Manage Acces -> Collaborator hinzufügen +
+Collaborator muss auch den git clone ... Befehl ausführen
+
+Readme verändern +
+cd 3bhitm-labs-eder/ +
+gedit README.md
+
+Git Status nachsehen und wieder auf remote Repo pushen +
+git status +
+git add README.md +
+git commit -m "update readme" +
+git push
+
+Git pull wenn Collaborator etwas am Readme geändert hat +
+git pull
+
+== 21.12.21
+
+Auf Windows SSH Key generieren (WSL2): +
+cd ~ +
+cd /home/<username> +
+ls +
+ls .ssh +
+code id_rsa +
+code .ssh +
+-> auf Github add SSH Key
+
+Auf Linux: +
+Stoff der letzen Stunde wiederholt
+
+Alten Ordner löschen +
+cd .. +
+rm -rf 3bhitm-labs-eder/
+
+Klonen - Ordner wiederhergestellt +
+mkdir work +
+cd work/ +
+git clone git@github.com:EderMoritz/3bhitm-labs-eder.git +
+cd 3bhitm-labs-eder/ +
+ls
+
+gedit README.md +
+git status +
+git add README.md +
+git status +
+git commit -m "test merge" +
+git status +
+git push +
+git pull
+
+Gleichzeitige Änderungen testen - Merge Konflikt +
+git config pull.rebase false +
+gedit README.md +
+git add . +
+git commit -m "update README" +
+git push
+
+Nachdem Collaborator README geändert und gemerged hat +
+git pull
 
