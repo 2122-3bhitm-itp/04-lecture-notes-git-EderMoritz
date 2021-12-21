@@ -1,3 +1,4 @@
+14.12.21
 Neuen Ordner für das Repo erstellen
 
 mkdir 3bhitm-labs-eder
@@ -59,7 +60,7 @@ git push
 Git pull wenn Collaborator etwas am Readme geändert hat
 git pull
 
-
+21.12.21
 Auf Windows SSH Key generieren (WSL2):
 cd ~
 cd /home/<username>
@@ -68,3 +69,32 @@ ls .ssh
 code id_rsa
 code .ssh
 auf Github add SSH Key
+
+Auf Linux:
+Stoff der letzen Stunde wiederholt
+
+Alten Ordner löschen
+cd ..
+rm -rf 3bhitm-labs-eder/
+
+Klonen - Ordner wiederhergestellt
+mkdir work
+cd work/
+git clone git@github.com:EderMoritz/3bhitm-labs-eder.git
+cd 3bhitm-labs-eder/
+ls
+
+Gleichzeitige Änderungen testen - Merge Konflikt
+gedit README.md 
+git status
+git add README.md 
+git status
+git commit -m "test merge"
+git status
+git push
+git pull
+git config pull.rebase false
+gedit README.md 
+git add .
+git commit -m "update README"
+git push
