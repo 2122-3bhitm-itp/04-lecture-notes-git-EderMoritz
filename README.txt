@@ -60,10 +60,11 @@ Git pull wenn Collaborator etwas am Readme geändert hat
 git pull
 
 
-Auf Windows:
+Auf Windows SSH Key generieren (WSL2):
 cd ~
 cd /home/<username>
 ls
 ls .ssh
 code id_rsa
 code .ssh
+auf Github add SSH Key
