@@ -84,7 +84,6 @@ git clone git@github.com:EderMoritz/3bhitm-labs-eder.git
 cd 3bhitm-labs-eder/
 ls
 
-Gleichzeitige Änderungen testen - Merge Konflikt
 gedit README.md 
 git status
 git add README.md 
@@ -93,8 +92,13 @@ git commit -m "test merge"
 git status
 git push
 git pull
+
+Gleichzeitige Änderungen testen - Merge Konflikt
 git config pull.rebase false
 gedit README.md 
 git add .
 git commit -m "update README"
 git push
+
+Nachdem Collaborator README geändert und gemerged hat
+git pull
