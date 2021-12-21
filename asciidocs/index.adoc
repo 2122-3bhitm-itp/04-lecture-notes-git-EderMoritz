@@ -14,7 +14,7 @@ ifdef::backend-html5[]
 // print the toc here (not at the default position)
 //toc::[]
 
-== 14.12.21
+== 2021-12-14 (Dienstag)
 
 Neuen Ordner für das Repo erstellen +
 mkdir 3bhitm-labs-eder +
@@ -77,7 +77,7 @@ git push
 Git pull wenn Collaborator etwas am Readme geändert hat +
 git pull
 
-== 21.12.21
+== 2021-12-21 (Dienstag)
 
 Auf Windows SSH Key generieren (WSL2): +
 cd ~ +
